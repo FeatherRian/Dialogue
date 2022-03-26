@@ -9,7 +9,8 @@ Which pokemon do you choose?
     + [Squirtle]
         -> chosen("Squirtle")
 
-
 === chosen(pokemon) ===
-You chose {pokemon}!
+I chose {pokemon}!
+
+Oh you are great!
 -> END

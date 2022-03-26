@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -20}
+  m_AnchoredPosition: {x: 260, y: -20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &290454645
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -16.712494, y: 0, z: 0, w: -0.000000036198646}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -556,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.29, y: -22.735}
-  m_SizeDelta: {x: 115.47, y: 115.47}
+  m_AnchoredPosition: {x: -494.7779, y: 6.7771}
+  m_SizeDelta: {x: 174.4942, y: 174.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581836971
 MonoBehaviour:
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 167.63663, y: 1.6763283, z: -997.87695, w: -144.89725}
+  m_margin: {x: 221.95204, y: 43.457485, z: -997.87695, w: -144.89725}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1752,10 +1752,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 627729426}
   dialogueText: {fileID: 1266993743}
+  avatar: {fileID: 581836971}
+  nameText: {fileID: 290454645}
   choices:
   - {fileID: 1113559658}
   - {fileID: 1230491399}
   - {fileID: 1756021169}
+  npcName: 
+  npcAvatar: {fileID: 0}
+  playerName: Player
+  playerAvatar: {fileID: 0}
+  textSpeed: 0.05
 --- !u!1 &1395674411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +1947,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 866463799}
   inkJSON: {fileID: 4900000, guid: 46e2dd3ff4cbd6940a328507147456d9, type: 3}
+  npcName: NPC1
+  npcAvatar: {fileID: 0}
 --- !u!61 &1434513329
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,6 +10,10 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private  TextAsset inkJSON;
 
+    [Header("NPC")]
+    [SerializeField] private string npcName;
+    [SerializeField] private Sprite npcAvatar;
+
     private bool playerInRange;
     private void Awake()
     {
@@ -24,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (InputManager.GetInstance().GetInteractPressed())
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON,npcName,npcAvatar);
             }
         }
         else

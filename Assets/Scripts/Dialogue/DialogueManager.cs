@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     private Sprite nextNpcAvatar;
     private GameObject thirdTrigger;
     private float timeThirdDialogue;
+    private bool waitForNextDialogue;
 
     
     private  TextMeshProUGUI[] choicesText;
@@ -77,7 +78,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!dialogueIsPlaying)
+        if ((!dialogueIsPlaying)||(waitForNextDialogue))
         {
             return;
         }
@@ -243,8 +244,9 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator NextDialogue()//在给定时间后进入下段对话
     {
+        waitForNextDialogue = true;
         yield return new WaitForSeconds(timeNextDialogue);
-
+        waitForNextDialogue = false;
         EnterDialogueMode(nextInkJSON, nextNpcName, nextNpcAvatar, thirdTrigger, timeThirdDialogue);
     }
 
